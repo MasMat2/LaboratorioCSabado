@@ -9,10 +9,12 @@
 */
 
 int main(int argc, char *argv[]) {
-	float x, funcion1;
+	float x, funcion1, funcion2, funcion3, funcion4;
 	printf("\nIngresar el valor de x:");
 	scanf("%f", &x);
 	funcion1 = ((x-1)/4)-((x-5)/36);
 	printf("\nCalculo1: %.2f\n", funcion1);
+	funcion2 = 6*(((x+1)/8)-((2*x-3)/16));
+	printf("\nCalculo2: %.2f\n", funcion2);
 	return 0;
 }
