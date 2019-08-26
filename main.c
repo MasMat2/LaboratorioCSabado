@@ -8,10 +8,11 @@
 *Matricula: 1679573
 */
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
 int main(int argc, char *argv[]) {
-	//Esre comentarios
-	system("pause");
+	float x, funcion1;
+	printf("\nIngresar el valor de x:");
+	scanf("%f", &x);
+	funcion1 = ((x-1)/4)-((x-5)/36);
+	printf("\nCalculo1: %.2f\n", funcion1);
 	return 0;
 }
