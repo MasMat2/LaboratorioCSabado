@@ -16,5 +16,7 @@ int main(int argc, char *argv[]) {
 	printf("\nCalculo1: %.2f\n", funcion1);
 	funcion2 = 6*(((x+1)/8)-((2*x-3)/16));
 	printf("\nCalculo2: %.2f\n", funcion2);
+	funcion3 = (x-(1-(x-2)/3))*2/3+1;
+	printf("\nCalculo3: %.2f\n", funcion3);
 	return 0;
 }
