@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	//***
 	//ACT1
 	int a, b;
-	printf("Para calclualar el mayor de dos numeros introduzca:");
+	printf("Para calcular el mayor de dos numeros introduzca:");
 	printf("\nEl primer numero: ");
 	scanf("%d", &a);
 	printf("El segundo numero: ");
@@ -28,8 +28,8 @@ int main(int argc, char *argv[]) {
 	printf("\n\n");
 	//***
 	//ACT2
-	a=5; 
-	b=3; 
+	a=5;
+	b=3;
 	int c=-12;
 	// Problema 1
 	printf("\n---------------------");
@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
 		printf("A es mayor a 3");
 	}
 	else{
-		printf("A es menor a 3");
+		printf("A es menor o igual a 3");
 	}
 	//Problema 2
 	printf("\nProblema 2\n");
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
 		printf("A (%d) es mayor a C (%d)", a,c);
 	}
 	else{
-		printf("A (%d) es menor a C (%d)", a, c);
+		printf("A (%d) es menor o igual a C (%d)", a, c);
 	}
 	// Problema 3
 	printf("\nProblema 3\n");
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 		printf("B es diferente de C");
 	}
 	else{
-		printf("B es igual a C"); 
+		printf("B es igual a C");
 	}
 	// Problema 4
 	printf("\nProblema 4\n");
@@ -75,10 +75,10 @@ int main(int argc, char *argv[]) {
 	// Problema 6
 	printf("\nProblema 6\n");
 	if ((c/b)<a){
-		printf("El cociente de C entre B es mayor a A");
+		printf("El cociente de C entre B es menor a A");
 	}
 	else{
-		printf("El cociente de C entre B es menor a A");
+		printf("El cociente de C entre B es mayor o igual a A");
 	}
 	// Problema 7
 	printf("\nProblema 7\n");
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
 		printf("La sumatoria de A, B y C no es 5");
 	}
 	// Problema 9
-	printf("\nProblema 9\n");	
+	printf("\nProblema 9\n");
 	if (((a+b)==8 )&&(a-b==2)){
 		printf("A mas B es igual a 8 y A menos B es igual a 2");
 	}
@@ -113,11 +113,11 @@ int main(int argc, char *argv[]) {
 	}
 	// Problema 11
 	printf("\nProblema 11\n");
-	if ((a>3)&&(b<3)&&(c<3)){
-		printf("A es mayor a 3 y B es menor a 3 y C es menor a 3");
-	}	
+	if ((a>3)&&(b>3)&&(c<3)){
+		printf("A es mayor a 3 y B es mayor a 3 y C es menor a 3");
+	}
 	else{
-		printf("A es menor a 3 o B es mayor a 3 o C es mayor a 3");
+		printf("A es menor o igual a 3 o B es menor o igual a 3 o C es mayor o igual a 3");
 	}
 	printf("\n---------------------");
 	//***
@@ -143,7 +143,7 @@ int main(int argc, char *argv[]) {
 		printf("A (%d) es mayor a C (%d)", a,c);
 	}
 	else{
-		printf("A (%d) es menor a C (%d)", a, c);
+		printf("A (%d) es menor o igual a C (%d)", a, c);
 	}
 	// Problema 3
 	printf("\nProblema 3\n");
@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) {
 		printf("B es diferente de C");
 	}
 	else{
-		printf("B es igual a C"); 
+		printf("B es igual a C");
 	}
 	// Problema 4
 	printf("\nProblema 4\n");
@@ -172,10 +172,10 @@ int main(int argc, char *argv[]) {
 	// Problema 6
 	printf("\nProblema 6\n");
 	if ((c/b)<a){
-		printf("El cociente de C entre B es mayor a A");
+		printf("El cociente de C entre B es menor a A");
 	}
 	else{
-		printf("El cociente de C entre B es menor a A");
+		printf("El cociente de C entre B es mayor o igual a A");
 	}
 	// Problema 7
 	printf("\nProblema 7\n");
@@ -193,7 +193,7 @@ int main(int argc, char *argv[]) {
 		printf("La sumatoria de A, B y C no es 5");
 	}
 	// Problema 9
-	printf("\nProblema 9\n");	
+	printf("\nProblema 9\n");
 	if (((a+b)==8 )&&(a-b==2)){
 		printf("A mas B es igual a 8 y A menos B es igual a 2");
 	}
@@ -210,11 +210,11 @@ int main(int argc, char *argv[]) {
 	}
 	// Problema 11
 	printf("\nProblema 11\n");
-	if ((a>3)&&(b<3)&&(c<3)){
-		printf("A es mayor a 3 y B es menor a 3 y C es menor a 3");
-	}	
+	if ((a>3)&&(b>3)&&(c<3)){
+		printf("A es mayor a 3 y B es mayor a 3 y C es menor a 3");
+	}
 	else{
-		printf("A es menor a 3 o B es mayor a 3 o C es mayor a 3");
+		printf("A es menor o igual a 3 o B es menor o igual a 3 o C es mayor o igual a 3");
 	}
 	printf("\n---------------------");
 	printf("\n\n");
