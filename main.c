@@ -12,8 +12,10 @@
 int main(int argc, char *argv[]) {
 	//**************ACTIVIDAD1*****************
 	int ventaEmpleadoOficinaEdificio[6][10][2];
+	//Asignar 4234 en ventaEmpleadoOficinaEdificio[2][6][1]
 	ventaEmpleadoOficinaEdificio[2][6][1] = 4234;
-	// printf("El empleado 3 de la oficina 7 del edificio numero 2 ha vendido %d", ventaEmpleadoOficinaEdificio[2][6][1]);
+	//Imprimr el valor de ventaEmpleadoOficinaEdificio[2][6][1]
+	printf("El empleado 3 de la oficina 7 del edificio numero 2 ha vendido %d", ventaEmpleadoOficinaEdificio[2][6][1]);
 	//Cuantos elementos componen el array multidimensional
 	//Matriz[n][m][p] numero de elementos = n*m*p
 	//El numero de elementos del array es 6*10*2=120
@@ -35,7 +37,9 @@ int main(int argc, char *argv[]) {
 	// }
 
 	//**************ACTIVIDAD2*****************
+	//Aumentar 10 a ventaEmpleadoOficinaEdificio[2][6][1]
 	ventaEmpleadoOficinaEdificio[2][6][1] += 10;
+	//Imprimir el valor de ventaEmpleadoOficinaEdificio[2][6][1]
 	printf("\nEl empleado 3 de la oficina 7 del edificio numero 2 ha vendido %d", ventaEmpleadoOficinaEdificio[2][6][1]);
 
 	printf("\n\n\n\n");
