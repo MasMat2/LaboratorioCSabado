@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 	//Declarar tres vairables
 	//text para guardar la entrada del usuario
 	//abc para integrar todas las letras que se van a contar
-	//counter para contabilizar cada letra del arreglo abs
+	//counter para contabilizar cada letra del arreglo abc
 	int j;
 	char abc[26]="abcdefghijklmnopqrstuvwxyz";
 	char text[' '];
