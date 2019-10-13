@@ -16,7 +16,6 @@ int main(int argc, char *argv[]) {
 	//**************ACTIVIDAD1*****************
 	char mana[' '];
 	int i, isPal=1;
-	int jumpSpace=0, jumpSpace1=0;
 	int leftIndex, rightIndex;
 
 
@@ -41,7 +40,7 @@ int main(int argc, char *argv[]) {
 			rightIndex--;
 		}
 		//Salir del ciclo si se reccorio toda la cadena
-		if(rightIndex<0 || leftIndex>strlen(mana)-1);
+		if(rightIndex<0 || leftIndex>strlen(mana)-1)
 			break;
 		if(mana[leftIndex]!=mana[rightIndex]){
 			isPal = 0;
