@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 		leftIndex++;
 		rightIndex--;
 
-		//Antes de evaluar la condicion revisar que no sea un espacio vacio, si lo es pasar al sisgueinte indice
+		//Antes de evaluar la condicion revisar que no sea un espacio, si lo es pasar al sisgueinte indice
 		while(mana[leftIndex]==' '){
 			leftIndex++;
 		}
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	//Si el valor bandera es 1 la cadena es palindromo, si es 0 no es palindromo
-	printf("La frase introducida ");
+	printf("\nLa frase introducida ");
 	if(isPal){
 		printf("es ");
 	}else{
@@ -60,9 +60,9 @@ int main(int argc, char *argv[]) {
 	//abc para integrar todas las letras que se van a contar
 	//counter para contabilizar cada letra del arreglo abc
 	int j;
-	char abc[26]="abcdefghijklmnopqrstuvwxyz";
 	char text[' '];
-	int counter[26]={};
+	int counter[26]={0};
+	char abc[26]={"abcdefghijklmnopqrstuvwxyz"};
 
 	//Pedir frase y guardar entrada en variable text
 	printf("\n\nIngresa una frase: ");
@@ -84,7 +84,7 @@ int main(int argc, char *argv[]) {
 		if(i%5==0){
 			printf("\n");
 		}
-		printf("\t%c: %d", abc[i], counter[i]);
+		printf("\t%c: %d",abc[i], counter[i]);
 	}
 	printf("\n\n\n\n");
 	system("pause");
