@@ -60,9 +60,9 @@ int main(int argc, char *argv[]) {
 	//abc para integrar todas las letras que se van a contar
 	//counter para contabilizar cada letra del arreglo abc
 	int j;
-	char text[' '];
+	char text[20];
 	int counter[26]={0};
-	char abc[26]={"abcdefghijklmnopqrstuvwxyz"};
+	char abc[27]={"abcdefghijklmnopqrstuvwxyz"};
 
 	//Pedir frase y guardar entrada en variable text
 	printf("\n\nIngresa una frase: ");
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
 
 	//Contar el numero de letras de cada tipo, recorriendo el texto y comparando cada letra con otro arreglo
 	//Si la letra de la cadena es igual la letra del arreglo abc en el indice j; sumar 1 al indice j del arreglo que contabiliza las letras
-	for(i=0;i<strlen(text);i++){
+	for(i=0;i<20;i++){
 		for(j=0;j<26;j++){
 			if(tolower(text[i])==abc[j]){
 				counter[j]++;
