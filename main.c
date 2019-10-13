@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
-
+  
 	//Imprimir el numero de veces que se repite cada letra recorriendo el arreglo de letras y el arreglo de contabilizaciones simultaneamente
 	printf("\nNumero de veces que se repite la letra");
 	for(i=0;i<26;i++){
