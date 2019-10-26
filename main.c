@@ -3,13 +3,15 @@
 
 /*
 *Autor: Adrian Maximiliano Munoz Martinez
-*Fecha: 12/10/2019
+*Fecha: 26/10/2019
 *Grupo: 008
 *Horario: 9-11am sabados
 *Matricula: 1679573
 */
 
 int is_prime(int n);
+
+int powe(int n, int up);
 
 int main(int argc, char *argv[]) {
 	//**************ACTIVIDAD1*****************
@@ -26,8 +28,16 @@ int main(int argc, char *argv[]) {
 			printf("El numero es primo");
 			break;
 	}
-	printf("\n");
+	printf("\n\n");
 
+	//**************ACTIVIDAD2*****************
+	int n, up;
+	printf("Ingresa la base del numero: ");
+	scanf("%d", &n);
+	printf("Ingresa el exponente del numero: ");
+	scanf("%d", &up);
+	printf("%d a la %d es %d", n, up, powe(n, up));
+	printf("\n\n\n\n");
 
 	system("pause");
 	return 0;
@@ -56,4 +66,13 @@ int is_prime(int n){
 		i += 6;
 	}
 	return 1;
+}
+
+
+int powe(int n, int up){
+	int i, pro=1;
+	for(i=0;i<up;i++){
+		pro *= n;
+	}
+	return pro;
 }
