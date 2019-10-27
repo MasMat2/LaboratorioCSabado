@@ -10,6 +10,19 @@
 *Matricula: 1679573
 */
 
+struct panda{
+	char nombre[30];
+	int sexo;
+	int peso;
+	int edad;
+	int birth[3];
+};
+
+void leerPanda(struct panda *p);
+int edadPanda(struct panda *p);
+int tenerBebes(struct panda *p);
+
+
 int main(int argc, char *argv[]) {
 	//**************ACTIVIDAD1*****************
 
@@ -104,7 +117,86 @@ int main(int argc, char *argv[]) {
 			flag = 1;
 		}
 	}
+
+	//**************ACTIVIDAD2*****************
+	int op;
+	flag=1;
+	char name[30];
+	printf("\n\nIngresa la cantidad de pandas que se alamcaenara en la base de datos: ");
+	scanf("%d", &num);
+	struct panda *pandas[num];
+	for(i=0;i<num;i++){
+		leerPanda(pandas[i]);
+	}
+	do{
+		printf("Menu:");
+		printf("\n1.- Determinar si puede tener bebes ");
+		printf("\n2.- Imprimir la edad");
+		printf("\n3.- Salir");
+		printf("\nEntrada: ");
+		scanf("%d", &op);
+		if(op<3){
+			do{
+				printf("Ingresa el nombre del panda: ");
+				getchar();
+				fgets(name, 30, stdin);
+				if((aux=strchr(name, '\n'))!=NULL) *aux = '\0';
+				for(i=0;i<num;i++){
+					if(pandas[i]->nombre == name){
+						flag = 0;
+						break;
+					}
+				}
+			}while(flag);
+
+			switch(op){
+				case 1:
+					if(tenerBebes(pandas[i])){
+						printf("\nEl panda %s puede tener bebes", pandas[i]->nombre);
+					}
+					else{
+						printf("\nEl panda %s no puede tener bebes", pandas[i]->nombre);
+					}
+				case 2:
+					printf("\nEl panda %s tiene %d anos", pandas[i]->nombre, pandas[i]->edad);
+			}
+		}
+	}while(op!=3);
 	printf("\n\n\n\n");
 	system("pause");
+	return 0;
+}
+
+void leerPanda(struct panda *p){
+	char *aux;
+	printf("Ingresa el nombre del panda: ");
+	getchar();
+	fgets(p->nombre, 30, stdin);
+	if((aux=strchr(p->nombre, '\n'))!=NULL) *aux = '\0';
+	printf("Ingresa el peso del panda: ");
+	scanf("%d", &p->peso);
+	do{
+		printf("Ingresar el sexo del panda (0-Hombre/1-Mujer): ");
+		scanf("%d", &p->sexo);
+	}while(p->sexo!=0 && p->sexo!=1);
+	printf("Ingresa la edad del panda: ");
+	scanf("%d", &p->edad);
+	printf("Ingresa la fecha de nacimiento del panda: ");
+	printf("\n\tDia: ");
+	scanf("%d", &p->birth[0]);
+	printf("\tMes: ");
+	scanf("%d", &p->birth[1]);
+	printf("\tAno: ");
+	scanf("%d", &p->birth[2]);
+}
+
+int edadPanda(struct panda *p){
+		return p->edad;
+}
+
+int tenerBebes(struct panda *p){
+	if(p->edad>5 && p->sexo==1){
+		return 1;
+	}
 	return 0;
 }
