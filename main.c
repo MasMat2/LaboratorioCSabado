@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	//Obtener cadena
 	printf("Ingrese una cadena: \n");
 	fflush(stdin);
-	fgets(org, 40, stdin);
+	gets(org);
 
 	//Posicionar apuntador al inicio de la cadena
 	for (p = org; *p != '\0'; p++)
@@ -44,7 +44,6 @@ int main(int argc, char *argv[])
 
 	printf("El numero de vocales en la cadena es: %d\n", counter);
 	//*****************Actividad2***************
-	printf("\n\n");
 	//Definir de variables y apuntadores tipo entero;
 	int a;
 	int b;
@@ -63,9 +62,6 @@ int main(int argc, char *argv[])
 	//Sumar los datos conetnido en la direccion contenida en A y B
 	suma = *A + *B;
 	printf("La suma es: %d\n", suma);
-
-	while (1)
-		;
-	// system("pause");
+	system("pause");
 	return 0;
 }
