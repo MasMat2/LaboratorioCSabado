@@ -33,19 +33,19 @@ int main(int argc, char *argv[]) {
 	//as_longitude estara ordenado en orden ascendente por longitud
 
 	//Orden original
-	printf("Coordenadas en su orden original:\n");
+	printf("\nCoordenadas en su orden original:");
 	for(i=0;i<SIZE;i++){
 		printf("\nLatitud: %d\tLongitud: %d", places[i].latitude, places[i].longitude);
 	}
 
 	//Orden por latitud
-	printf("\nCoordenadas ordenadas por latitud:\n");
+	printf("\n\nCoordenadas ordenadas por latitud:");
 	for(i=0;i<SIZE;i++){
 		printf("\nLatitud: %d\tLongitud: %d", as_latitude[i]->latitude, as_latitude[i]->longitude);
 	}
 
 	//Orden por longitud
-	printf("\nCoordenadas ordenadas por longitud:\n");
+	printf("\n\nCoordenadas ordenadas por longitud:");
 	for(i=0;i<SIZE;i++){
 		printf("\nLatitud: %d\tLongitud: %d", as_longitude[i]->latitude, as_longitude[i]->longitude);
 	}
