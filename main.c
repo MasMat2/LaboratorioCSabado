@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define SIZE_NAME 30
-#define SIZE 3
+#define SIZE 4
 
 /*
 *Autor: Adrian Maximiliano Munoz Martinez
@@ -14,47 +13,41 @@
 */
 
 int main(int argc, char *argv[]) {
+	struct coordinates{
+		int latitude;
+		int longitude;
+	} places[SIZE], *as_latitude[SIZE], *as_longitude[SIZE];
 
-	struct picture_info{
-		char name[SIZE_NAME];
-		int date_time[3];
-	} pictures[SIZE], *pictures_pointer[SIZE];
-
-	//LLenar estuctura pictures
-	int i, j;
-	char *aux;
+	int i;
 	for(i=0;i<SIZE;i++){
-		getchar();
-		printf("\nFoto %d", i);
-		printf("\n\tNombre: ");
-		fflush(stdin);
-		fgets(pictures[i].name, SIZE_NAME, stdin);
-		if ((aux = strchr(pictures[i].name, '\n')) != NULL) *aux = '\0';
-		do{
-			printf("\tIngresa la fecha en el siguiente formato dia/mes/ano (01/01/00): ");
-			scanf("%2d%*c%2d%*c%2d", &pictures[i].date_time[0], &pictures[i].date_time[1], &pictures[i].date_time[2]);
-		}while(0);
+		printf("\nLugar %d\n", i);
+		printf("\tIngresa la latitude: ");
+		scanf("%d", &places[i].latitude);
+		printf("\tIngresa la longitud: ");
+		scanf("%d", &places[i].longitude);
 	}
 
+	//Cada puntero i de la tabla as_latitude, apuntara a una estructura en places
+	//as_latitude estara ordenado en orden ascendente por latitud
+	//Cada puntero i de la tabla as_longitude, apuntara a una estructura en places
+	//as_longitude estara ordenado en orden ascendente por longitud
 
-	//Cada puntero i de la tabla pictures_pointer apuntara a la estructura pictures[i]
+	//Orden original
+	printf("Coordenadas en su orden original:\n");
 	for(i=0;i<SIZE;i++){
-		pictures_pointer[i] = &pictures[i];
+		printf("\nLatitud: %d\tLongitud: %d", places[i].latitude, places[i].longitude);
 	}
 
-	//Imprimir los informacion de las fotos desde la tabla de apuntadores
-	printf("\n\nReporte\n");
+	//Orden por latitud
+	printf("\nCoordenadas ordenadas por latitud:\n");
 	for(i=0;i<SIZE;i++){
-		printf("Foto %d\n\t Nombre: %s Fecha: ", i, pictures_pointer[i]->name);
-		for(j=0;j<3;j++){
-			printf("%d", pictures_pointer[i]->date_time[j]);
-			if(j<2){
-				printf("\\");
-			}
-			else{
-				printf("\n");
-			}
-		}
+		printf("\nLatitud: %d\tLongitud: %d", as_latitude[i]->latitude, as_latitude[i]->longitude);
+	}
+
+	//Orden por longitud
+	printf("\nCoordenadas ordenadas por longitud:\n");
+	for(i=0;i<SIZE;i++){
+		printf("\nLatitud: %d\tLongitud: %d", as_longitude[i]->latitude, as_longitude[i]->longitude);
 	}
 	system("pause");
 	return 0;
